@@ -1,0 +1,23 @@
+<h1>Listing mblogs</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mblogs.each do |mblog| %>
+  <tr>
+    <td><%= mblog.user %></td>
+    <td><%= link_to 'Show', mblog %></td>
+    <td><%= link_to 'Edit', edit_mblog_path(mblog) %></td>
+    <td><%= link_to 'Destroy', mblog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mblog', new_mblog_path %>
