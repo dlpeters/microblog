@@ -1,4 +1,6 @@
 Microblog::Application.routes.draw do
+  resources :entries
+
   resources :mblogs
 
   # The priority is based upon order of creation:
